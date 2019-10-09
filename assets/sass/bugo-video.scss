@@ -1,4 +1,19 @@
-.video-player {
+/**
+ * BUGO VIDEO
+ *
+ * * note
+ * TODO: something
+ * ! Deprecate
+ * ? Question
+ * @param myParam
+ **/
+
+@import "bugo-vide-variables";
+@debug "Loading Bugo Video Module SASS";
+@import "custom-variables";
+
+
+ .video-player {
   max-width: 100%;
   padding-bottom: 52.6%;
   position: relative;
