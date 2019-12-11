@@ -1,0 +1,32 @@
+<div
+  class="video-player"
+>
+<script>
+  // Load videojs
+  // https://www.npmjs.com/package/video.js
+  if(!videojsTag){
+    var videojsTag = document.createElement('script');
+    videojsTag.src = "https://unpkg.com/video.js/dist/video.min.js";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(videojsTag, firstScriptTag);
+  }
+</script>
+{{ .path }}
+<video
+    id="my-player"
+    class="video-js"
+    controls
+    preload="auto"
+    data-setup='{}'>
+  <source src="{{ .path }}" type="video/mp4"></source>
+  {{/*  <source src="" type="video/webm"></source>
+  <source src="" type="video/ogg"></source>  */}}
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a
+    web browser that
+    <a href="https://videojs.com/html5-video-support/" target="_blank">
+      supports HTML5 video
+    </a>
+  </p>
+</video>
+</div>
